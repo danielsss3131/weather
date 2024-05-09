@@ -10,6 +10,15 @@ app.use(cors);
 
 //https://api.openweathermap.org/data/2.5/weather?lat=44.34&lon=10.99&appid=b9f792786ad37f486cf4a129f6e0d8c6
 
+
+const getLocation = async (City: string, Country: string) => {
+  const response1 = await fetch(
+    `https://api.api-ninjas.com/v1/geocoding?city=${City}&country=${Country}&appid=${API_KEY}`
+  );
+  const LocationData = await response1.json().catch((e) => "error");
+
+  return LocationData;
+};
 //TODO: send 2 variables to the function, and use them in the api call (lat and lon)
 const getWeather = async (lat: number, lon: number) => {
   const response = await fetch(
