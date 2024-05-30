@@ -1,0 +1,105 @@
+body,
+html {
+  height: 100%;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-image: url("weather.jpg"); /* Adjust the path based on your project structure */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.form {
+  margin-bottom: 20px;
+}
+
+.form-group {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  margin-right: 10px;
+  width: 150px; /* Adjust the width to align inputs */
+  color: white; /* Change label color to white */
+}
+
+.form-group input {
+  width: 200px; /* Fixed width for input fields */
+  padding: 5px;
+}
+
+.weather-data {
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.8
+  ); /* Slightly transparent background */
+  padding: 20px;
+  border-radius: 8px;
+  overflow: auto;
+  margin-bottom: 20px;
+}
+
+.cities-container {
+  display: flex;
+}
+
+.popular-cities,
+.recent-cities {
+  background-color: rgba(
+    233,
+    233,
+    233,
+    0.8
+  ); /* Slightly transparent background */
+  padding: 20px;
+  border-radius: 8px;
+  margin-right: 20px; /* Add some space between the lists */
+}
+
+.popular-cities {
+  width: 200px; /* Fixed width to ensure it's on the left */
+}
+
+.recent-cities {
+  flex-grow: 1; /* Take up the remaining space */
+}
+
+.popular-cities ul,
+.recent-cities ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.popular-cities li,
+.recent-cities li {
+  margin-bottom: 5px;
+  cursor: pointer;
+  color: blue;
+}
+
+.error {
+  color: red;
+  margin-top: 20px;
+}
+
+pre {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+.units-toggle {
+  margin-top: 10px;
+  padding: 5px 10px;
+  font-size: 12px;
+  cursor: pointer;
+}
