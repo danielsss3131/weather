@@ -1,4 +1,3 @@
-import { City } from './App.tsx';
 import express, { Express, Request, Response } from "express";
 import dotenv from "dotenv";
 const cors = require("cors");
